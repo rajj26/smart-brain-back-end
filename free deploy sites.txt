@@ -1,0 +1,23 @@
+Frontend:
+
+- Github Pages
+
+- Netlify
+
+
+Backend/Database:
+
+- https://fly.io/
+
+- https://render.com
+
+- https://railway.app
+
+- https://cyclic.sh
+
+- https://supabase.com/
+
+Another REALLY cool option is to buy a RaspberryPi and have your own server at home!
+
+
+These are free deployment sites
