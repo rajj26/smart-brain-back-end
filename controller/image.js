@@ -1,4 +1,5 @@
 const clarifai = require('clarifai');
+const fetch = require('node-fetch');
 
 
 const setupClarifai = (imageUrl) => {
