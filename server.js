@@ -1,7 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
-const fetch = require('node-fetch');
 const knex = require('knex');
 
 const register = require('./controller/register.js');
