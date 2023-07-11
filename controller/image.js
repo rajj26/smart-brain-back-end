@@ -1,5 +1,6 @@
 const clarifai = require('clarifai');
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
+const fetch = require('isomorphic-fetch');
 
 
 const setupClarifai = (imageUrl) => {
