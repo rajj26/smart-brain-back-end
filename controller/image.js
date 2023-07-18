@@ -4,11 +4,13 @@ const fetch = require('isomorphic-fetch');
 
 
 const setupClarifai = (imageUrl) => {
+    // console.log('setup clarifai image url :', imageUrl);
+
     const PAT = '3019e98844444670871e5fde9dd3f399';
       // Specify the correct user_id/app_id pairings
       // Since you're making inferences outside your app's scope
-    const USER_ID = 'raj';       
-    const APP_ID = 'face-detection';
+    const USER_ID = 'clarifai';       
+    const APP_ID = 'main';
       // Change these to whatever model and image URL you want to use
       // const MODEL_ID = 'face-detection';
       // const MODEL_VERSION_ID = 'aa7f35c01e0642fda5cf400f543e7c40';  
@@ -41,19 +43,24 @@ const setupClarifai = (imageUrl) => {
 }; 
 
     return requestOptions
+    
 
 
 }
+
+
 
 const handleApiCall = (req, res) => {
+    const input = req.body.input;
     fetch(`https://api.clarifai.com/v2/models/face-detection/versions/6dc7e46bc9124c5c8824be4822abe105/outputs`, 
-          setupClarifai(req.body.input))
+          setupClarifai(input))
+          .then(response => response.json())
           .then(data => {
-            res.json(data);
+            res.json(data)
           })
           .catch(err => res.status(400).json('Unable to work with API'))
-}
 
+}
 
 
 const handleImage = (req, res, db) => {
