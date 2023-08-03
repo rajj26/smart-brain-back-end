@@ -6,7 +6,7 @@ const fetch = require('isomorphic-fetch');
 const setupClarifai = (imageUrl) => {
     // console.log('setup clarifai image url :', imageUrl);
 
-    const PAT = '3019e98844444670871e5fde9dd3f399';
+    const PAT = process.env.API_CLARIFAI;
       // Specify the correct user_id/app_id pairings
       // Since you're making inferences outside your app's scope
     const USER_ID = 'clarifai';       
